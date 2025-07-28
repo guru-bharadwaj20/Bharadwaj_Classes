@@ -1,0 +1,20 @@
+body::before {
+    display: block;
+    content: '';
+    height: 72px;
+}
+
+html {
+  scroll-padding-top: 72px;
+}
+
+.navbar-brand img {
+  height: 45px;
+  width: 150px;
+}
+
+@media (min-width: 768px) {
+    .news-input {
+        width: 50%;
+    }
+}
