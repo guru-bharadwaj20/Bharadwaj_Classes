@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Bharadwaj Classes</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+      <div class="container">
+        <a href="#" class="navbar-brand"><img src="img/logo.png" alt=""></a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="#learn" class="nav-link">What You'll Learn</a>
+            </li>
+            <li class="nav-item">
+              <a href="#questions" class="nav-link">Questions</a>
+            </li>
+            <li class="nav-item">
+              <a href="#instructors" class="nav-link">Instructors</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Showcase -->
+    <section
+      class="bg-dark text-light p-5 p-lg-0 pt-5 text-center text-sm-start"
+    >
+      <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <div>
+            <h1>Master the <span class="text-warning">Core of Programming</span></h1>
+            <p class="lead my-4">
+              Building strong foundations today so our students can lead and innovate in the technology of tomorrow!
+            </p>
+            <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#enroll">Let's get Started</button>
+          </div>
+          <img
+            class="img-fluid w-50 d-none d-sm-block"
+            src="img/showcase.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="bg-primary text-light p-5">
+  <div class="container">
+    <div class="d-md-flex justify-content-between align-items-center">
+      <h3 class="mb-3 mb-md-0">Sign Up for our Newsletter!</h3>
+
+      <div class="input-group news-input">
+        <input type="text" class="form-control" placeholder="Enter Email" />
+        <button class="btn btn-dark btn-lg" type="button" onclick="showAlert()">Submit</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Boxes -->
+    <section class="p-5">
+      <div class="container gd-md-2">
+        <div class="row tex-center g-4">
+          <div class="col-md">
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-laptop"></i>
+                </div>
+                <h3 class="card-title">Virtual</h3>
+                <p class="card-text">
+                  Learn from anywhere with live instructor-led classes, interactive sessions, and hands-on coding - completely online.
+                </p>
+                <button class="btn btn-primary">&#8377;4999 Yearly</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-secondary text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-person-square"></i>
+                </div>
+                <h3 class="card-title">Hybrid</h3>
+                <p class="card-text">
+                  Combine the flexibility of online learning with the engagement of in-person sessions for a balanced experience.
+                </p>
+                <button class="btn btn-dark">&#8377;9999 Yearly</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-people"></i>
+                </div>
+                <h3 class="card-title">In Person</h3>
+                <p class="card-text">
+                  Experience face-to-face learning with expert instructors, hands-on practice, and real-time collaboration in a classroom environment.
+                </p>
+                <button class="btn btn-primary">&#8377;14999 Yearly</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Learn Sections -->
+    <section id="learn" class="p-5 pt-0 pb-1">
+  <div class="container">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-md">
+        <img src="img/fundamentals.svg" class="img-fluid" alt="" />
+      </div>
+      <div class="col-md p-5">
+        <h2>Learn the <span class="text-warning">Fundamentals</span></h2>
+        <p class="lead">
+          Gain essential programming skills by mastering C/C++, Java, Python, or Web Development - designed to launch your tech career.
+        </p>
+        <p>
+          This year-long program provides a deep, hands-on learning experience to prepare you for real-world development.
+          Available in Virtual, Hybrid, and In-Person formats to suit your learning preference and schedule.
+        </p>
+        <a href="#" class="btn btn-light mt-3" onclick="alert('The website is under construction, please cooperate!'); return false;">
+          <i class="bi bi-chevron-right"></i> Read More
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section id="learn" class="p-5 bg-dark text-light">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md p-5">
+            <h2>Learn <span class="text-warning">Advanced WebDev</span></h2>
+            <p class="lead">
+              Advanced Web Development covers modern frameworks, APIs, performance optimization, and full-stack project building.
+            </p>
+            <p>
+              To enroll in our Advanced Web Development course, you must first complete the <span class="text-warning">Introduction to Web Development </span>course.
+This ensures you have the foundational knowledge needed to succeed in advanced topics and projects.
+            </p>
+            <a href="#" class="btn btn-light mt-3" onclick="alert('The website is under construction, please cooperate!'); return false;">
+          <i class="bi bi-chevron-right"></i> Read More
+        </a>
+          </div>
+          <div class="col-md">
+            <img src="img/react.svg" class="img-fluid" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Question Accordion -->
+    <section id="questions" class="p-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Frequently asked Questions!</h2>
+        <div class="accordion accordion-flush" id="questions">
+            <!-- Item 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collpased"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-one"
+              >
+                Where exactly are you Located?
+              </button>
+            </h2>
+            <div
+              id="question-one"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                <p>We are located at RPC Layout, Vijaynagar, Bangalore - 560104, India</p>
+              </div>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collpased"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-two"
+              >
+                How much does it cost to attend?
+              </button>
+            </h2>
+            <div
+              id="question-two"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                <p>Our courses range from ₹4999 to ₹14999 yearly, depending on the format you choose — Virtual, Hybrid, or In-Person.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collpased"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-three"
+              >
+                What do I need to know beforehand?
+              </button>
+            </h2>
+            <div
+              id="question-three"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                <p>For foundational courses, no prior experience is needed. For advanced courses like Advanced Web Development, you should complete the introductory course first.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Item 4 -->
+           <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collpased"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-four"
+              >
+                How do I sign up?
+              </button>
+            </h2>
+            <div
+              id="question-four"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                <p>You can sign up by clicking the "Let's get Started" button and filling out the enrollment form in the modal window.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Item 5 -->
+           <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collpased"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-five"
+              >
+                Do you help me find a Job?
+              </button>
+            </h2>
+            <div
+              id="question-five"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                <p>Yes, we offer career support and job placement assistance to our graduates.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instructors -->
+    <section id="instructors" class="p-5 bg-primary">
+        <div class="container">
+            <h2 class="text-center text-white">Our Instructors!</h2>
+            <p class="lead text-center text-white mb-5">
+                All our instructors have 10+ years working as a Web Developer in the industry.
+            </p>
+            <div class="row g-4">
+                <!-- Instructor 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-light">
+                        <div class="card-body text-center">
+                            <img src="https://randomuser.me/api/portraits/men/1.jpg" class="rounded-circle mb-3" alt="">
+                            <h3 class="card-title mb-3">Harry Potter</h3>
+                            <p class="card-text">Over 12 years of experience in full-stack development, successfully guiding 400+ students to land tech jobs. Recognized speaker at tech conferences and contributor to open-source projects.</p>
+                            <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                            <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                            <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                            <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Instructor 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-light">
+                        <div class="card-body text-center">
+                            <img src="https://randomuser.me/api/portraits/women/3.jpg" class="rounded-circle mb-3" alt="">
+                            <h3 class="card-title mb-3">Ginny</h3>
+                            <p class="card-text">Skilled in cloud computing and DevOps with 12 years of industry experience, mentoring professionals to excel in modern deployment practices. Recognized for innovative teaching methods.</p>
+                            <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                            <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                            <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                            <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Instructor 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-light">
+                        <div class="card-body text-center">
+                            <img src="https://randomuser.me/api/portraits/men/3.jpg" class="rounded-circle mb-3" alt="">
+                            <h3 class="card-title mb-3">Ron Weasley</h3>
+                            <p class="card-text">Expert in backend development with 15 years in the industry, mentoring numerous students in Java and Python. Published multiple programming tutorials and awarded “Best Instructor” twice.</p>
+                            <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                            <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                            <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                            <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Instructor 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-light">
+                        <div class="card-body text-center">
+                            <img src="https://randomuser.me/api/portraits/women/2.jpg" class="rounded-circle mb-3" alt="">
+                            <h3 class="card-title mb-3">Hermione</h3>
+                            <p class="card-text">Over 10 years of expertise in frontend technologies and UI/UX design, helping 350+ students build impressive portfolios. Regular workshop host and author of popular web development guides.</p>
+                            <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                            <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                            <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                            <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact and Map -->
+     <section class="p-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md">
+                    <h2 class="text-center mb-4">Contact Info.</h2>
+                    <ul class="list-group list-group-flush lead">
+                        <li class="list-group-item">
+                            <span class="fw-bold">Main Location:</span> RPC Layout, Bangalore
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Enrollment Phone:</span> +91 9876543210
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Student Phone:</span> +91 9988776655
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Enrollment Email:</span> enrollment@test.com
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Student Email:</span> student@test.com
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Map API (Additional) -->
+                <div class="col-md">
+                    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+                    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+                    <div id="map" style="height: 280px; width: 100%; border-radius: 10px; border: 1px solid black;"></div>
+
+                    <script>
+                        var map = L.map('map').setView([12.9716, 77.5946], 13);
+
+                      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '&copy; OpenStreetMap contributors', maxZoom: 19}).addTo(map);
+
+                      var marker = L.marker([12.9716, 77.5946]).addTo(map);
+
+                      marker.bindPopup("<b>Bangalore, Karnataka</b><br>India").openPopup();
+                    </script>
+
+                </div>
+            </div>
+        </div>
+     </section>
+
+    <!-- Footer -->
+     <footer class="p-2 bg-dark text-white d-flex justify-content-center align-items-center text-center position-relative">
+        <div class="container">
+            <p class="lead">Copyright &copy;2025 Bharadwaj Classes</p>
+
+            <a href="#" class="position-absolute bottom-0 end-0 p-2">
+                <i class="bi bi-arrow-up-circle h2"></i>
+            </a>
+        </div>
+     </footer>
+
+    <!-- Modal -->
+<div class="modal fade" style="background-color: rgba(0, 0, 0, 0.5);" id="enroll" tabindex="-1" aria-labelledby="enrollLabel">
+  <div class="modal-dialog modal-lg"> <!-- Optional: 'modal-lg' for wider modal to fit the form -->
+    <div class="modal-content">
+      <div class="modal-body p-0"> <!-- Remove padding for better iframe fit -->
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfia2F02gJGvhMRBJNF4bw9MyzgzDJH1tHJEZMhCBKohanmxg/viewform?embedded=true" 
+                width="100%" 
+                height="883" 
+                frameborder="0" 
+                marginheight="0" 
+                marginwidth="0">
+          Loading…
+        </iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal (Optional - Form Filling at Web instead of Google Forms)
+    <div class="modal fade" style="background-color: rgba(0, 0, 0, 0.5);" id="enroll" tabindex="-1" aria-labelledby="enrollLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="enrollLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="lead">Fill out this form and we will get back to you!</p>
+        <form>
+            <div class="mb-3">
+                <label for="first-name" class="col-form-label">
+                    Full Name:
+                </label>
+                <input type="text" class="form-control" id="first-name">
+            </div>
+            <div class="mb-3">
+                <label for="first-name" class="col-form-label">
+                    Email:
+                </label>
+                <input type="text" class="form-control" id="first-name">
+            </div>
+            <div class="mb-3">
+                <label for="first-name" class="col-form-label">
+                    Phone:
+                </label>
+                <input type="text" class="form-control" id="first-name">
+            </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+    </div> -->
+     
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+  function showAlert() {
+    alert("The service has not yet been started.");
+  }
+</script>
+
+  </body>
+</html>
