@@ -1,73 +1,157 @@
 # Bharadwaj Classes
-This repository presents a hybrid educational management system featuring both a **Tkinter-based Python GUI** and a **fully responsive Bootstrap-powered front-end website**. Built for the fictional "Bharadwaj Classes", it offers a complete student experience - from registration to course enrollment and payments, via both desktop software and modern web interface.
+
+**One coaching-centre experience built twice — as a Tkinter desktop app and as a responsive Bootstrap website.**
+
+[![Python](https://img.shields.io/badge/Python-Tkinter-3776AB?logo=python&logoColor=white)](GUI.py)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-5.0-7952B3?logo=bootstrap&logoColor=white)](Bharadwaj%20Classes%20using%20Bootstrap/index.html)
+[![HTML](https://img.shields.io/badge/HTML_·_CSS_·_JS-no_build_step-E34F26?logo=html5&logoColor=white)](Bharadwaj%20Classes%20using%20Bootstrap/)
+[![Scope](https://img.shields.io/badge/scope-academic_·_portfolio-lightgrey)](#license)
+
+For the fictional "Bharadwaj Classes": a student registers, logs in, picks a
+course in one of three learning modes, and pays by QR code. The desktop version
+came first; the website rebuilds the same workflow for the browser and adds the
+things a public site needs.
 
 ---
 
-## 🚀 Features
+## Contents
 
-- Developed a robust **Tkinter GUI** application for login, registration, course selection, and payment with a QR-based confirmation system.
-- Created a parallel **Bootstrap website** with fully responsive layout, smooth navigation, newsletter, instructor cards, FAQ accordion, Google Form integration, and Leaflet-based live map display.
-- Incorporated realistic content structure mimicking real-world educational platforms, offering three learning modes—Virtual, Hybrid, and In-Person—with pricing and benefits.
-
----
-
-## ✅ Important Takeaways
-
-- Practiced full-stack design by converting a Python GUI into an aesthetic, interactive website using **HTML, CSS, Bootstrap 5, and JS**.
-- Learned responsive UI principles, modal forms, embedded Google Forms, font icons (Bootstrap Icons), accordion behaviors, and map APIs.
-- Gained experience in aligning front-end design with back-end logic by visually replicating the original Python GUI workflow on the web.
-
----
-
-## 📂 Project Overview
-
-<div align="center">
-
-<table>
-  <tr>
-    <td align="center" width="350">
-      <img src="https://img.icons8.com/color/100/000000/python.png" width="60" alt="Python Logo"><br/>
-      <strong>Tkinter GUI Platform</strong><br/>
-      <p>A Python Tkinter-based desktop app for user login, course selection, and QR code payment.</p>
-    </td>
-   <td align="center" width="250" rowspan="2">
-      <img src="img/gui.jpg" width="100%" alt="GUI Screenshot"><br/>
-      <strong style="color: white; background-color: #333; padding: 4px 8px; display: inline-block;">GUI Preview</strong>
-   </td>
-    <td align="center" width="450" rowspan="2">
-      <img src="img/website.jpg" style="width: 100%; height: 280px; object-fit: cover;" alt="Website Screenshot"><br/>
-      <strong style="color: white; background-color: #333; padding: 4px 8px; display: inline-block;">WebPage Preview</strong><br/><br/>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="350">
-      <img src="https://img.icons8.com/color/100/000000/bootstrap.png" width="60" alt="Bootstrap Logo"><br/>
-      <strong>Bootstrap Webpage</strong><br/>
-      <p>A responsive website using Bootstrap replicating the GUI app for browser-based access.</p>
-    </td>
-  </tr>
-</table>
-
-</div>
+| Section | |
+|---|---|
+| [What it does](#what-it-does) | The two versions, side by side |
+| [Architecture](#architecture) | Desktop flow and web page structure |
+| [How a student enrols](#how-a-student-enrols) | Register, choose, pay |
+| [Quick start](#quick-start) | Run the app, open the site |
+| [Project status](#project-status) | What each version covers |
+| [Design decisions](#design-decisions) | Why rebuild it for the web |
+| [Repository layout](#repository-layout) | Where things live |
+| [Team](#team) | Who built it |
 
 ---
 
-## 🛠️ Setup Instructions
+## What it does
 
-### 🔹 For GUI Version
-1. Clone this repository  
-2. Navigate to the Tkinter project directory  
-3. Run `main.py` using any Python IDE or terminal with Python 3 installed  
-4. Make sure image files and assets are in the correct relative paths  
+| Area | Tkinter app | Bootstrap website |
+|---|---|---|
+| **Accounts** | Login and registration with input validation (e.g. digits-only age) | Modal sign-up and an embedded Google Form |
+| **Courses** | Course selection with details per language | Course cards for Virtual, Hybrid and In-Person modes, with pricing and benefits |
+| **Payment** | QR-code payment confirmation | — |
+| **Information** | — | Instructor cards, an FAQ accordion, a newsletter sign-up, a live Leaflet map |
+| **Layout** | Fixed desktop window | Fully responsive, Bootstrap Icons |
 
-### 🔹 For Web Version
-1. Navigate to the website folder  
-2. Open `index.html` in your preferred browser  
-3. No server or installation required  
-4. Ensure `img/` directory and `style.css` are correctly linked  
+<p align="center">
+  <img src="img/gui.jpg" width="32%" alt="Tkinter GUI preview" />
+  &nbsp;
+  <img src="img/website.jpg" width="62%" alt="Website preview" />
+</p>
 
 ---
 
-## 📌 Disclaimer
+## Architecture
 
-This dual-version educational management system was developed by me for academic and portfolio purposes. **Redistributing or presenting this project as your own is strictly prohibited.** Educational branding and design ideas are purely fictional and inspired by modern e-learning platforms.
+```mermaid
+graph LR
+    subgraph desktop["GUI.py — Tkinter"]
+        LOGIN["Login"] --> REG["Registration<br/>validated inputs"]
+        REG --> COURSE["Course selection<br/>details per language"]
+        COURSE --> PAY["Payment<br/>QR.png"]
+    end
+
+    subgraph web["index.html — Bootstrap 5"]
+        HERO["Showcase"] --> MODES["Learning modes<br/>Virtual · Hybrid · In-Person"]
+        MODES --> INSTR["Instructors"]
+        INSTR --> FAQ["FAQ accordion"]
+        FAQ --> FORM["Google Form · newsletter"]
+        FORM --> MAP["Leaflet map"]
+    end
+
+    PAY -. "same workflow, rebuilt for the browser" .-> MODES
+```
+
+---
+
+## How a student enrols
+
+```mermaid
+sequenceDiagram
+    participant S as Student
+    participant A as Tkinter app
+    participant Q as QR payment
+
+    S->>A: log in or register
+    A->>A: validate the fields
+    S->>A: choose a course
+    A-->>S: course details
+    S->>A: proceed to pay
+    A->>Q: show QR.png
+    Q-->>S: scan and pay
+    A-->>S: confirmation (or an error if the QR image is missing)
+```
+
+---
+
+## Quick start
+
+```bash
+# desktop app — Python 3 with Tkinter; run from the repo root so QR.png is found
+python GUI.py
+
+# website — no server or install
+#   open "Bharadwaj Classes using Bootstrap/index.html" in a browser
+```
+
+---
+
+## Project status
+
+Both versions are complete for their scope. The website was added in July 2025,
+eight months after the desktop app, as a rebuild of the same workflow.
+
+| Version | Status |
+|---|---|
+| Tkinter desktop app | ✅ login, registration, course selection, QR payment |
+| Bootstrap website | ✅ responsive landing site with forms, FAQ and map |
+
+---
+
+## Design decisions
+
+**Rebuild, don't port.** The website keeps the desktop app's flow — choose a
+mode, see what it costs, sign up — but uses the web's own patterns: modals,
+accordions and an embedded form instead of extra windows.
+
+**Static on purpose.** The site is plain HTML, CSS and Bootstrap from a CDN, so it
+opens from the filesystem with nothing to install or host.
+
+**Three learning modes.** Virtual, Hybrid and In-Person, each with its own price
+and benefits, mirror how real coaching centres sell courses.
+
+---
+
+## Repository layout
+
+```
+.
+├── GUI.py                                Tkinter desktop app
+├── QR.png                                payment QR used by the app
+├── Bharadwaj Classes using Bootstrap/
+│   ├── index.html                        the website
+│   ├── style.css
+│   └── img/                              logo and illustrations
+└── img/                                  screenshots for this README
+```
+
+---
+
+## Team
+
+| Member | Focus |
+|---|---|
+| **Guru R Bharadwaj** | Both versions — desktop app and website |
+
+---
+
+## License
+
+Built for academic and portfolio purposes. The branding is fictional.
+**Redistributing or presenting this project as your own is prohibited.**
