@@ -1,5 +1,13 @@
 # Bharadwaj Classes
 
+<p align="center">
+  <a href="Bharadwaj_Classes%20Demo.mp4">
+    <img src="img/Bharadwaj_Classes%20Demo%20thumbnail.png" alt="Watch the Bharadwaj_Classes demo video" width="720">
+  </a>
+  <br>
+  <sub>▶ <b><a href="Bharadwaj_Classes%20Demo.mp4">Watch the Bharadwaj_Classes demo</a></b> (74 s): the feature table and commits, the README quick start on a fresh clone, then both versions live: the Tkinter app from login to the QR payment, and the Bootstrap site in Chrome</sub>
+</p>
+
 **One coaching-centre experience built twice — as a Tkinter desktop app and as a responsive Bootstrap website.**
 
 [![Python](https://img.shields.io/badge/Python-Tkinter-3776AB?logo=python&logoColor=white)](GUI.py)
